@@ -9,6 +9,7 @@ resource "docker_image" "apache" {
 }
 
 resource "docker_container" "apache" {
+  depends_on = [docker_image.apache]
   image = docker_image.apache.latest
   name  = "apache"
   ports {
