@@ -1,5 +1,6 @@
 provider "docker" {
-  host = "tcp://127.0.0.1:5555"
+  # for specific remote docker daemon
+  # host = "tcp://127.0.0.1:5555"
 }
 
 resource "docker_image" "apache" {
